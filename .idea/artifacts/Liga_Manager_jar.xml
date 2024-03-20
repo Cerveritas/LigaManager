@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Liga Manager:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Liga_Manager_jar</output-path>
+    <root id="archive" name="Liga Manager.jar">
+      <element id="module-output" name="Liga Manager" />
+    </root>
+  </artifact>
+</component>
