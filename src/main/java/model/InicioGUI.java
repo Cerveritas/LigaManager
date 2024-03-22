@@ -23,6 +23,9 @@ public class InicioGUI {
     private JButton registrarseButton;
     private JLabel iniciaSesionLabel;
     private JLabel managerLabel;
+    private JPanel PanelDatos;
+    private JPanel PanelBotones;
+    private JPanel PanelPalabras;
 
 
     public InicioGUI() {
@@ -36,7 +39,6 @@ public class InicioGUI {
         // OPCIONES DEL BOTON DE INICIAR SESIÓN
         iniciarSesionButton.setPreferredSize(new Dimension(200, 30));
         iniciarSesionButton.setForeground(Color.black);
-        iniciarSesionButton.setBorder(new RoundedBorder(10));
 
         // Agregar un MouseAdapter al botón para cambio de color
         iniciarSesionButton.addMouseListener(new MouseAdapter() {
@@ -56,7 +58,6 @@ public class InicioGUI {
         // OPCIONES DEL BOTON DE REGISTRARSE
         registrarseButton.setPreferredSize(new Dimension(200, 30));
         registrarseButton.setForeground(Color.black);
-        registrarseButton.setBorder(new RoundedBorder(10));
 
         // Agregar un MouseAdapter al botón para cambio de color
         registrarseButton.addMouseListener(new MouseAdapter() {
@@ -113,10 +114,16 @@ public class InicioGUI {
             public void mouseClicked(MouseEvent e) {
                 // Acciones al hacer clic
                 System.out.println("Abriendo pestaña de inicio de sesion");
+                JFrame frame = new JFrame("PrincipalGUI");
+                frame.setContentPane(new PrincipalGUI().PanelPrincipal);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setBounds(500,250,1000,600);
+                frame.setVisible(true);
 
 
 
-                JOptionPane.showMessageDialog(PanelPrincipal, "Pestaña de inicio de sesion en proceso...");
+
             }
         });
 
