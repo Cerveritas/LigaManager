@@ -3,6 +3,8 @@ package model;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -89,9 +91,9 @@ public class InicioGUI {
 /************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 
         // ACCION DE BOTÓN REGISTRAR
-        registrarseButton.addMouseListener(new MouseAdapter() {
+        registrarseButton.addActionListener(new ActionListener() {
             @Override
-            public void mouseClicked(MouseEvent e) {
+            public void actionPerformed(ActionEvent e) {
                 // Acciones al hacer clic
                 System.out.println("Abriendo pestaña de registro");
 
@@ -109,9 +111,11 @@ public class InicioGUI {
         });
 
         // ACCION DE BOTÓN DE INICIAR
-        iniciarSesionButton.addMouseListener(new MouseAdapter() {
+        iniciarSesionButton.addActionListener(new ActionListener() {
             @Override
-            public void mouseClicked(MouseEvent e) {
+            public void actionPerformed(ActionEvent e) {
+
+
                 // Acciones al hacer clic
                 System.out.println("Abriendo pestaña de inicio de sesion");
                 JFrame frame = new JFrame("PrincipalGUI");
@@ -121,10 +125,11 @@ public class InicioGUI {
                 frame.setBounds(500,250,1000,600);
                 frame.setVisible(true);
 
-
-
-
+                //Cierra el frame donde esta situado el boton que es pulsado en ese momento
+                ((JFrame) SwingUtilities.getWindowAncestor(iniciarSesionButton)).dispose();
             }
+
+
         });
 
 

@@ -28,6 +28,11 @@ public class PrincipalGUI {
         PanelResto.setPreferredSize(new Dimension(0, 500));
 
 
+
+
+        /*********************************************************************************************************/
+        /**************************  FUNCIONAMIENTO DE BOTONES / LABELS  *****************************************/
+
         //FUNCION DEL BOTON/TEXTPANE *FUTBOL*
         futbolLabel.addMouseListener(new MouseAdapter() {
             @Override
@@ -39,9 +44,11 @@ public class PrincipalGUI {
                 frame.setContentPane(new FutbolGUI().PanelPrincipalFutbol);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.pack();
-                //frame.setDefaultCloseOperation(1);
                 frame.setBounds(500,250,1000,600);
                 frame.setVisible(true);
+
+                //Cierra el frame donde esta situado el boton que es pulsado en ese momento
+                ((JFrame) SwingUtilities.getWindowAncestor(futbolLabel)).dispose();
 
 
 
@@ -54,13 +61,22 @@ public class PrincipalGUI {
         });
 
 
+
         //FUNCION DEL BOTON/TEXTPANE *BALONCESTO*
         baloncestoLabel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
 
-                JOptionPane.showMessageDialog(PanelPrincipal, "hola");
+                JFrame frame = new JFrame("BaloncestoGUI");
+                frame.setContentPane(new BaloncestoGUI().PanelPrincipalBaloncesto);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setBounds(500,250,1000,600);
+                frame.setVisible(true);
+
+                //Cierra el frame donde esta situado el boton que es pulsado en ese momento
+                ((JFrame) SwingUtilities.getWindowAncestor(baloncestoLabel)).dispose();
 
 
 

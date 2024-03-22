@@ -5,17 +5,18 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class FutbolGUI {
-    public JPanel PanelPrincipalFutbol;
+public class BaloncestoGUI {
+    public JPanel PanelPrincipalBaloncesto;
     private JPanel PanelDeporte;
     private JPanel PanelResto;
-    private JLabel FÚTBOLLabel;
-    private JLabel BALONCESTOLabel;
     private JLabel TENISLabel;
+    private JLabel BALONCESTOLabel;
+    private JLabel FUTBOLLabel;
     private JLabel imagenLabel;
 
 
-    public FutbolGUI() {
+
+    public BaloncestoGUI() {
 
         // Inserción del icono
         Icon icon = new ImageIcon("src/main/java/images/iconoInicio (4).png");
@@ -29,7 +30,7 @@ public class FutbolGUI {
 
 
 
-        // BOTON LOGO
+
         imagenLabel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -48,17 +49,18 @@ public class FutbolGUI {
             }
         });
 
+
         /********************************************************************************************************/
         /******************************  ACCIONES DE BOTONES / LABEL DEPORTES  **********************************/
 
 
-        BALONCESTOLabel.addMouseListener(new MouseAdapter() {
+        FUTBOLLabel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
 
                 JFrame frame = new JFrame("BaloncestoGUI");
-                frame.setContentPane(new BaloncestoGUI().PanelPrincipalBaloncesto);
+                frame.setContentPane(new FutbolGUI().PanelPrincipalFutbol);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.pack();
                 frame.setBounds(500,250,1000,600);
@@ -74,8 +76,5 @@ public class FutbolGUI {
 
 
 
-
-
-
-    }// FIN DEL CONSTRUCOR
+    }// FIN DEL CONSTRUCTOR
 }
