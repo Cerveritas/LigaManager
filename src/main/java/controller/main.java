@@ -22,11 +22,11 @@ public class main {
         // Cargar el icono
         ImageIcon icon = new ImageIcon("src/main/java/images/iconoAPP.PNG");
 
-// Establecer el icono en la ventana
+        // Establecer el icono en la ventana
 
         frame.setIconImage(icon.getImage());
 
-// Mostrar la ventana
+        // Mostrar la ventana
         frame.setVisible(true);
 
         frame.setContentPane(new InicioGUI().PanelPrincipal);

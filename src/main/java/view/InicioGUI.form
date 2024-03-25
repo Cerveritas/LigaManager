@@ -38,7 +38,7 @@
               <text value="Contraseña"/>
             </properties>
           </component>
-          <component id="42ca3" class="javax.swing.JTextField" binding="contrasenaTextField">
+          <component id="6f8c0" class="javax.swing.JPasswordField" binding="contrasenaTextField">
             <constraints>
               <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
                 <minimum-size width="-1" height="25"/>

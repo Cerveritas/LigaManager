@@ -5,18 +5,17 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class BaloncestoGUI {
-    public JPanel PanelPrincipalBaloncesto;
+public class TenisGUI {
+    public JPanel PanelPrincipalTenis;
     private JPanel PanelDeporte;
     private JPanel PanelResto;
-    private JLabel TENISLabel;
-    private JLabel BALONCESTOLabel;
     private JLabel FUTBOLLabel;
+    private JLabel BALONCESTOLabel;
+    private JLabel TENISLabel;
     private JLabel imagenLabel;
 
 
-
-    public BaloncestoGUI() {
+    public TenisGUI() {
 
         // Inserción del icono
         Icon icon = new ImageIcon("src/main/java/images/iconoInicio (4).png");
@@ -28,9 +27,7 @@ public class BaloncestoGUI {
 
 
 
-
-
-
+        // BOTON LOGO
         imagenLabel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -49,18 +46,17 @@ public class BaloncestoGUI {
             }
         });
 
-
         /********************************************************************************************************/
         /******************************  ACCIONES DE BOTONES / LABEL DEPORTES  **********************************/
 
 
-        FUTBOLLabel.addMouseListener(new MouseAdapter() {
+        BALONCESTOLabel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
 
                 JFrame frame = new JFrame("Liga Manager");
-                frame.setContentPane(new FutbolGUI().PanelPrincipalFutbol);
+                frame.setContentPane(new BaloncestoGUI().PanelPrincipalBaloncesto);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.pack();
                 frame.setBounds(500,250,1000,600);
@@ -71,13 +67,12 @@ public class BaloncestoGUI {
             }
         });
 
-        TENISLabel.addMouseListener(new MouseAdapter() {
+        FUTBOLLabel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-
                 JFrame frame = new JFrame("Liga Manager");
-                frame.setContentPane(new TenisGUI().PanelPrincipalTenis);
+                frame.setContentPane(new FutbolGUI().PanelPrincipalFutbol);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.pack();
                 frame.setBounds(500,250,1000,600);
@@ -93,5 +88,14 @@ public class BaloncestoGUI {
 
 
 
+
+
+
+
+
+
+
+
     }// FIN DEL CONSTRUCTOR
 }
+

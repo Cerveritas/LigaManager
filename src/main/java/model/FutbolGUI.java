@@ -35,7 +35,7 @@ public class FutbolGUI {
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
 
-                JFrame frame = new JFrame("PrincipalGUI");
+                JFrame frame = new JFrame("Liga Manager");
                 frame.setContentPane(new PrincipalGUI().PanelPrincipal);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.pack();
@@ -57,7 +57,7 @@ public class FutbolGUI {
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
 
-                JFrame frame = new JFrame("BaloncestoGUI");
+                JFrame frame = new JFrame("Liga Manager");
                 frame.setContentPane(new BaloncestoGUI().PanelPrincipalBaloncesto);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.pack();
@@ -66,6 +66,22 @@ public class FutbolGUI {
 
                 //Cierra el frame donde esta situado el boton que es pulsado en ese momento
                 ((JFrame) SwingUtilities.getWindowAncestor(imagenLabel)).dispose();
+            }
+        });
+
+        TENISLabel.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                JFrame frame = new JFrame("Liga Manager");
+                frame.setContentPane(new TenisGUI().PanelPrincipalTenis);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setBounds(500,250,1000,600);
+                frame.setVisible(true);
+
+                //Cierra el frame donde esta situado el boton que es pulsado en ese momento
+                ((JFrame) SwingUtilities.getWindowAncestor(TENISLabel)).dispose();
             }
         });
 
