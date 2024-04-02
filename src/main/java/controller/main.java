@@ -15,7 +15,7 @@ public class main {
                 }
             }
         } catch (Exception e) {
-            // If Nimbus is not available, you can set the GUI to another look and feel.
+            System.out.println("no se encuentra el paquete de estilos");
         }
 
         JFrame frame = new JFrame("Liga Manager");

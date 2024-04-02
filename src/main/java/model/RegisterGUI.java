@@ -128,8 +128,7 @@ public class RegisterGUI {
 
                 insertData("names", data);
 
-                EmailVerification emailVerification = new EmailVerification();
-                emailVerification.sendVerificationEmail(textFieldCorreo.getText());
+
 
 
 

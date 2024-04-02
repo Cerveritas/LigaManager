@@ -2,6 +2,9 @@ package model;
 
 
 
+import com.google.cloud.firestore.Firestore;
+import com.google.firebase.FirebaseException;
+import com.google.firebase.auth.FirebaseAuth;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
@@ -16,6 +19,8 @@ public class InicioGUI {
 
 
 
+    private Firestore firestore;
+    private FirebaseAuth auth;
 
     private String COLORAZULREGISTER = "#3F54F5";
     public JPanel PanelPrincipal;
@@ -118,6 +123,11 @@ public class InicioGUI {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                String email = correoElectronicoTextField.getText();
+                String password = contrasenaTextField.getText();
+
+
+
 
 
                 // Acciones al hacer clic
@@ -137,7 +147,10 @@ public class InicioGUI {
         });
 
 
+
     }//FIN CONSTRUCTOR
+
+
 
 
 
