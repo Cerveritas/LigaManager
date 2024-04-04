@@ -2,6 +2,8 @@ package model;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -133,6 +135,21 @@ public class PrincipalGUI {
                 crearUnirmeAUnaButton.setBackground(Color.decode("#FAC014"));
                 crearUnirmeAUnaButton.setFont(new Font("Calibri", Font.BOLD, 20));
                 crearUnirmeAUnaButton.setForeground(Color.white);
+            }
+        });
+
+        crearUnirmeAUnaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame = new JFrame("Crear/Unirse a una Liga");
+                frame.setContentPane(new crearUnirseLiga().PanelPrincipal);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setBounds(750,250,500,600);
+                frame.setVisible(true);
+
+                //Cierra el frame donde esta situado el boton que es pulsado en ese momento
+                ((JFrame) SwingUtilities.getWindowAncestor(crearUnirmeAUnaButton)).dispose();
             }
         });
 
