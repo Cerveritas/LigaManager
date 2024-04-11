@@ -1,9 +1,8 @@
 package model;
 
 
-
 import com.google.cloud.firestore.Firestore;
-import com.google.firebase.FirebaseException;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -12,7 +11,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-
 
 
 public class InicioGUI {
@@ -130,6 +128,8 @@ public class InicioGUI {
 
 
 
+
+
                 // Acciones al hacer clic
                 System.out.println("Abriendo pestaña de inicio de sesion");
                 JFrame frame = new JFrame("Liga Manager");
@@ -148,7 +148,14 @@ public class InicioGUI {
 
 
 
+
+
+
     }//FIN CONSTRUCTOR
+
+
+
+
 
 
 

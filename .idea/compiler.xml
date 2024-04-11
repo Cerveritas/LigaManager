@@ -9,5 +9,8 @@
         <module name="Liga Manager" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="firebase-firestore" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
