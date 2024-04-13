@@ -2,6 +2,8 @@ package model;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class crearUnirseLiga {
     public JPanel PanelPrincipal;
@@ -30,6 +32,44 @@ public class crearUnirseLiga {
         tituloLabel.setMinimumSize(new Dimension(0,90));
         empiezaLabel.setMinimumSize(new Dimension(0,90));
 
+
+        // Actiones de botones
+        VolverButtonJlabel.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+
+                JFrame frame = new JFrame("Liga Manager");
+                frame.setContentPane(new PrincipalGUI().PanelPrincipal);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setBounds(500, 250, 1000, 600);
+                frame.setVisible(true);
+
+                //Cierra el frame donde esta situado el boton que es pulsado en ese momento
+                ((JFrame) SwingUtilities.getWindowAncestor(VolverButtonJlabel)).dispose();
+
+
+            }
+        });
+
+
+        imagenCrearUnaLiga.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+
+                JFrame frame = new JFrame("crearNuevaLiga");
+                frame.setContentPane(new crearNuevaLiga().PanelPrincipalCrearNuevaLiga);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setBounds(750,250,500,600);
+                frame.setVisible(true);
+
+                //Cierra el frame donde esta situado el boton que es pulsado en ese momento
+                ((JFrame) SwingUtilities.getWindowAncestor(VolverButtonJlabel)).dispose();
+            }
+        });
 
 
 

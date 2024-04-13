@@ -13,6 +13,7 @@ public class FutbolGUI {
     private JLabel BALONCESTOLabel;
     private JLabel TENISLabel;
     private JLabel imagenLabel;
+    private JLabel imageLabel;
 
 
     public FutbolGUI() {
@@ -20,6 +21,7 @@ public class FutbolGUI {
         // Inserción del icono
         Icon icon = new ImageIcon("src/main/java/images/iconoInicio (4).png");
         imagenLabel.setIcon(icon);
+        imageLabel.setIcon(icon);
 
 
         // Tamaño altura del PanelResto
@@ -45,6 +47,23 @@ public class FutbolGUI {
                 //Cierra el frame donde esta situado el boton que es pulsado en ese momento
                 ((JFrame) SwingUtilities.getWindowAncestor(imagenLabel)).dispose();
 
+            }
+        });
+
+        imageLabel.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+
+                JFrame frame = new JFrame("Liga Manager");
+                frame.setContentPane(new PrincipalGUI().PanelPrincipal);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setBounds(500,250,1000,600);
+                frame.setVisible(true);
+
+                //Cierra el frame donde esta situado el boton que es pulsado en ese momento
+                ((JFrame) SwingUtilities.getWindowAncestor(imagenLabel)).dispose();
             }
         });
 

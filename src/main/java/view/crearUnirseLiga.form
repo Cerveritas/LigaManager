@@ -53,7 +53,7 @@
         <properties>
           <font name="Calibri" size="36" style="1"/>
           <foreground color="-1"/>
-          <text value="una Liga Fantasy"/>
+          <text value="una Liga Manager"/>
           <verticalAlignment value="3"/>
           <verticalTextPosition value="3"/>
         </properties>

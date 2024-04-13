@@ -2,8 +2,8 @@ package model;
 
 
 import com.google.cloud.firestore.Firestore;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
+
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
@@ -11,6 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+
 
 
 public class InicioGUI {
@@ -38,6 +39,8 @@ public class InicioGUI {
 
 
     public InicioGUI() {
+
+
 
         // Inserción del icono
         Icon icon = new ImageIcon("src/main/java/images/iconoInicio (2).png");
@@ -123,6 +126,8 @@ public class InicioGUI {
 
                 String email = correoElectronicoTextField.getText();
                 String password = contrasenaTextField.getText();
+
+
 
 
 
