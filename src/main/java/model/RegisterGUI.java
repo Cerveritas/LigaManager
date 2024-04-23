@@ -1,18 +1,8 @@
 package model;
 
-import com.google.api.core.ApiFuture;
-import com.google.auth.oauth2.GoogleCredentials;
-import com.google.cloud.firestore.DocumentReference;
-import com.google.cloud.firestore.Firestore;
-import com.google.cloud.firestore.WriteResult;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.FirebaseOptions;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthException;
-import com.google.firebase.auth.UserRecord;
-import com.google.firebase.cloud.FirestoreClient;
 
 
+import com.mongodb.client.MongoClient;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -21,15 +11,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.HashMap;
-import java.util.Map;
-
-
-
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
 
 
 
@@ -38,8 +19,6 @@ import java.util.concurrent.ExecutionException;
 
 public class RegisterGUI {
 
-
-    Firestore firestore;
 
     public JPanel PanelPrincipal;
     private JPanel PanelPalabras;
@@ -56,6 +35,7 @@ public class RegisterGUI {
     private JLabel contrasenaLabel;
     private JLabel edadLabel;
     private JComboBox comboEdad;
+
 
 
     public RegisterGUI() {
@@ -104,6 +84,9 @@ public class RegisterGUI {
             }
         });
 
+
+
+
         /********************************************************************************************************************************/
                                                         // EDAD DE COMBOBOX
 
@@ -119,17 +102,21 @@ public class RegisterGUI {
                                                 // CONEXIÓN CON BASE DE DATOS FIREBASE
 
 
+
         registerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                createConection();
+                String usuario = textFieldUsuario.getText();
+                String correo = textFieldCorreo.getText();
+                String contrasena = textFieldCotrasena.getText();
 
-                Map<String, Object> data = new HashMap<>();
-                data.put("name", textFieldCorreo.getText());
-                data.put("password", textFieldCotrasena.getText());
 
-                insertData("names", data);
+
+
+                String baseDeDatos = "LigaManager";
+
+
 
 
 
@@ -167,43 +154,9 @@ public class RegisterGUI {
     }// FIN DEL CONSTRUCTOR
 
 
-    private void createConection() {
-
-        try {
-            ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-            InputStream inputStream = classLoader.getResourceAsStream("liga-manager-24ab5-firebase-adminsdk-s07gw-688099d3ee.json");
-
-            GoogleCredentials googleCredentials = GoogleCredentials.fromStream(inputStream);
-            FirebaseOptions options = new FirebaseOptions.Builder()
-                    .setCredentials(googleCredentials)
-                    .build();
-
-            FirebaseApp.initializeApp(options);
-            firestore = FirestoreClient.getFirestore();
-
-            System.out.println("Carga json firebase");
-
-        } catch (IOException e) {
-            System.out.println("" + e);
-        } catch (java.lang.IllegalStateException i) {
-
-        }
-    }
 
 
-    private void insertData(String coleccion,
-                            Map<String, Object> data){
 
-        try {
-            if (firestore != null){
-                DocumentReference docRef = firestore.collection(coleccion).document();
-                ApiFuture<WriteResult> result = docRef.set(data);
-                System.out.println("" + result.get().getUpdateTime());
-            }
-        } catch (InterruptedException | ExecutionException e){
-
-        }
-    }
 
 
 

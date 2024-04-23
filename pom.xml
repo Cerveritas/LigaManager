@@ -24,14 +24,11 @@
 
     <dependencies>
 
-
-        <dependency>
-            <groupId>com.google.firebase</groupId>
-            <artifactId>firebase-admin</artifactId>
-            <version>8.1.0</version> <!-- O la versión más reciente -->
-        </dependency>
-
-
+            <dependency>
+                <groupId>org.mongodb</groupId>
+                <artifactId>mongodb-driver-sync</artifactId>
+                <version>5.0.1</version>
+            </dependency>
 
 
     </dependencies>

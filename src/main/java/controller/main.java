@@ -9,7 +9,7 @@ public class main {
 
 
     public static void main(String[] args) {
-        try {
+        /*try {
             for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
                     UIManager.setLookAndFeel(info.getClassName());
@@ -18,7 +18,7 @@ public class main {
             }
         } catch (Exception e) {
             System.out.println("no se encuentra el paquete de estilos");
-        }
+        }*/
 
         JFrame frame = new JFrame("Liga Manager");
         // Cargar el icono

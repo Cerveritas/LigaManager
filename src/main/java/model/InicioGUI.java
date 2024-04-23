@@ -1,8 +1,6 @@
 package model;
 
 
-import com.google.cloud.firestore.Firestore;
-import com.google.firebase.auth.FirebaseAuth;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -18,8 +16,7 @@ public class InicioGUI {
 
 
 
-    private Firestore firestore;
-    private FirebaseAuth auth;
+
 
     private String COLORAZULREGISTER = "#3F54F5";
     public JPanel PanelPrincipal;

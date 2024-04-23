@@ -16,6 +16,8 @@
         </constraints>
         <properties>
           <background color="-14044476"/>
+          <font size="16" style="1"/>
+          <foreground color="-14672082"/>
           <text value="Crear Liga"/>
         </properties>
       </component>
