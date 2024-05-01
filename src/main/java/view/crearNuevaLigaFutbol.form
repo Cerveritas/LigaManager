@@ -175,7 +175,7 @@
                     </constraints>
                     <properties>
                       <font name="Calibri" size="20" style="1"/>
-                      <text value="Label"/>
+                      <text value=""/>
                     </properties>
                   </component>
                   <component id="1ee73" class="javax.swing.JLabel" binding="DCLabel">
@@ -184,7 +184,7 @@
                     </constraints>
                     <properties>
                       <font name="Calibri" size="20" style="1"/>
-                      <text value="Label"/>
+                      <text value=""/>
                     </properties>
                   </component>
                   <component id="ef5f7" class="javax.swing.JLabel" binding="EDLabel">
@@ -193,7 +193,7 @@
                     </constraints>
                     <properties>
                       <font name="Calibri" size="20" style="1"/>
-                      <text value="Label"/>
+                      <text value=""/>
                     </properties>
                   </component>
                   <component id="bf88f" class="javax.swing.JLabel" binding="MCILabel">
@@ -202,7 +202,7 @@
                     </constraints>
                     <properties>
                       <font name="Calibri" size="20" style="1"/>
-                      <text value="Label"/>
+                      <text value=""/>
                     </properties>
                   </component>
                   <component id="c643b" class="javax.swing.JLabel" binding="MCLabel">
@@ -211,7 +211,7 @@
                     </constraints>
                     <properties>
                       <font name="Calibri" size="20" style="1"/>
-                      <text value="Label"/>
+                      <text value=""/>
                     </properties>
                   </component>
                   <component id="4d670" class="javax.swing.JLabel" binding="MCDLabel">
@@ -220,7 +220,7 @@
                     </constraints>
                     <properties>
                       <font name="Calibri" size="20" style="1"/>
-                      <text value="Label"/>
+                      <text value=""/>
                     </properties>
                   </component>
                   <component id="417e3" class="javax.swing.JLabel" binding="LILabel">
@@ -229,7 +229,7 @@
                     </constraints>
                     <properties>
                       <font name="Calibri" size="20" style="1"/>
-                      <text value="Label"/>
+                      <text value=""/>
                     </properties>
                   </component>
                   <component id="522d1" class="javax.swing.JLabel" binding="DFILabel">
@@ -238,7 +238,7 @@
                     </constraints>
                     <properties>
                       <font name="Calibri" size="20" style="1"/>
-                      <text value="Label"/>
+                      <text value=""/>
                     </properties>
                   </component>
                   <component id="3459c" class="javax.swing.JLabel" binding="PorLabel">
@@ -247,7 +247,7 @@
                     </constraints>
                     <properties>
                       <font name="Calibri" size="20" style="1"/>
-                      <text value="Label"/>
+                      <text value=""/>
                     </properties>
                   </component>
                   <component id="b21f5" class="javax.swing.JLabel" binding="DCDLabel">
@@ -256,7 +256,7 @@
                     </constraints>
                     <properties>
                       <font name="Calibri" size="20" style="1"/>
-                      <text value="Label"/>
+                      <text value=""/>
                     </properties>
                   </component>
                   <component id="6f283" class="javax.swing.JLabel" binding="LDLabel">
@@ -265,7 +265,7 @@
                     </constraints>
                     <properties>
                       <font name="Calibri" size="20" style="1"/>
-                      <text value="Label"/>
+                      <text value=""/>
                     </properties>
                   </component>
                 </children>

@@ -40,6 +40,8 @@ public class crearNuevaLigaFutbol {
     private JLabel LDLabel;
 
 
+
+    /* quitar cuando se termine de usar */
     public static void main(String[] args) {
         JFrame frame = new JFrame("crearNuevaLigaFutbol");
         frame.setContentPane(new crearNuevaLigaFutbol().PanelPrincipal);
@@ -68,20 +70,16 @@ public class crearNuevaLigaFutbol {
 
 
 
-
-
-
         // Añadimos los items de los box
-        seleccionBox.addItem("Selecciona el nivel");
+        seleccionBox.addItem("");
         seleccionBox.addItem("Aficionado +18 años");
         seleccionBox.addItem("Juvenil 14-17 años");
         seleccionBox.addItem("Discapacitados");
-        // Eliminar la primera opción
 
 
 
 
-        // Funcionamiento del seleccionBox
+        // Funcionamiento del seleccionBox y de la ventana de jugadores
         seleccionBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
